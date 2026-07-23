@@ -128,6 +128,9 @@ The more "Julia" way to create this addition table would have been with an *arra
 # ╔═╡ 1bd14df4-54dc-423b-aced-6de48ee9cdac
 C = [i + j for i in 1:m, j in 1:n_2]
 
+# ╔═╡ d28f0920-c259-47e1-a316-6580811a45f9
+C
+
 # ╔═╡ ad4c3677-3e57-47b4-b374-f09af8f8d1d0
 md"""
 ### Exercises
@@ -135,6 +138,11 @@ md"""
 #### 4.1 
 Loop over integers between 1 and 100 and print their squares.
 """
+
+# ╔═╡ b9b14283-e125-4af7-a1fd-860d486c1ca8
+for i in 1:100
+	println("$i - $(i*i)")
+end
 
 # ╔═╡ a8d8b2ba-8fc6-4929-beba-619598dc6cdb
 md"""
@@ -145,6 +153,14 @@ Add to the code above a bit to create a dictionary, `squares` that holds integer
 squares[10] == 100
 ```
 """
+
+# ╔═╡ 4e617fdb-f0d3-400a-8fd8-a8a30e6b0c7b
+begin
+	squares = Dict{Int16, Int16}()
+	for i in 1:100
+		squares[i] = i * i
+	end
+end
 
 # ╔═╡ f8da7802-0185-40ef-81d7-465706a115ab
 begin
@@ -157,6 +173,9 @@ md"""
 #### 4.3 
 Use an array comprehension to create an an array `squares_arr` that stores the squares for all integers between 1 and 100.
 """
+
+# ╔═╡ c4d435af-9771-4cdf-86fa-f14f4bb5abaa
+squares_arr = [i * i for i in 1:100]
 
 # ╔═╡ 7deaa8c5-ed77-4644-b422-cc9eabe74305
 begin
@@ -195,10 +214,14 @@ project_hash = "71853c6197a6a7f222db0f1978c7cb232b87c5ee"
 # ╠═62262c3b-d752-4aae-a517-5d73ce571c08
 # ╠═a032082e-0c78-4456-8033-cac932dfbdd0
 # ╠═1bd14df4-54dc-423b-aced-6de48ee9cdac
+# ╠═d28f0920-c259-47e1-a316-6580811a45f9
 # ╠═ad4c3677-3e57-47b4-b374-f09af8f8d1d0
+# ╠═b9b14283-e125-4af7-a1fd-860d486c1ca8
 # ╠═a8d8b2ba-8fc6-4929-beba-619598dc6cdb
+# ╠═4e617fdb-f0d3-400a-8fd8-a8a30e6b0c7b
 # ╠═f8da7802-0185-40ef-81d7-465706a115ab
 # ╠═6f89ce07-ff33-4a8d-9849-e7a2c2bf92c5
+# ╠═c4d435af-9771-4cdf-86fa-f14f4bb5abaa
 # ╠═7deaa8c5-ed77-4644-b422-cc9eabe74305
 # ╟─00000000-0000-0000-0000-000000000001
 # ╟─00000000-0000-0000-0000-000000000002
